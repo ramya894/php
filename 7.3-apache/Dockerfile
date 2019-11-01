@@ -5,6 +5,7 @@ ENV PHP_VERSION 7.3
 
 COPY init_container.sh /bin/
 COPY hostingstart.html /home/site/wwwroot/hostingstart.html
+COPY solr-8.2.0-src.tgz /home/site/wwwroot/solr-8.2.0-src.tgz
 
 RUN chmod 755 /bin/init_container.sh \
     && mkdir -p /home/LogFiles/ \
