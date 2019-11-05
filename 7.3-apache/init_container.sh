@@ -37,4 +37,7 @@ oryxArgs="-appPath $appPath -output $startupCommandPath \
 
 echo "Running oryx $oryxArgs"
 eval oryx $oryxArgs
+
+echo "Starting Apache Solr Server ..."
+solr start -force
 $startupCommandPath
