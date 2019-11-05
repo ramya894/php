@@ -54,7 +54,8 @@ RUN rm -f /etc/apache2/conf-enabled/other-vhosts-access-log.conf
 
 WORKDIR /home/site/wwwroot
 # Apche solr
-COPY solr-8.2.0-src.tgz /home/site/wwwroot/solr-8.2.0-src.tgz
+RUN apk add apache-ant
+COPY solr-8.1.1-src.tgz /usr/src/solr-8.1.1-src.tgz
 # ======
 
 ENTRYPOINT ["/bin/init_container.sh"]
